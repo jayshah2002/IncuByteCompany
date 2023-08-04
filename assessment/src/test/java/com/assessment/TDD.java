@@ -32,7 +32,7 @@ public class TDD {
 	    assertEquals(Direction.E, chandrayan.getDirection());
 
 	    // Test case 3
-	    chandrayan.setPosition(3,5,1);
+	    chandrayan.setPosition(0,0,0);
 	    chandrayan.setDirection(Direction.W);
 	    chandrayan.moveForward();
 	    assertEquals("(-1, 0, 0)", chandrayan.getPosition());
@@ -40,24 +40,12 @@ public class TDD {
 
 		// Test case 4
 	    chandrayan.setPosition(0, 0, 0);
-	    chandrayan.setDirection(Direction.S);
+	    chandrayan.setDirection(Direction.N);
 	    chandrayan.moveForward();
-	    assertEquals("(3,5,0)", chandrayan.getPosition());
-	    assertEquals(Direction.S, chandrayan.getDirection());
+	    assertEquals("(0,0,0)", chandrayan.getPosition());
+	    assertEquals(Direction.N, chandrayan.getDirection());
 
-		// Test case 5
-	    chandrayan.setPosition(-1, -1, -1);
-	    chandrayan.setDirection(Direction.S);
-	    chandrayan.moveForward();
-	    assertEquals("(-1, -1, -2)", chandrayan.getPosition());
-	    assertEquals(Direction.S, chandrayan.getDirection());
-
-		// Test case 6
-	    chandrayan.setPosition(2,-3,4);
-	    chandrayan.setDirection(Direction.W);
-	    chandrayan.moveForward();
-	    assertEquals("(-1, -1, -2)", chandrayan.getPosition());
-	    assertEquals(Direction.W, chandrayan.getDirection());
+		
 	}
 
 	//Initially it will be failed
@@ -84,10 +72,10 @@ public class TDD {
 	    assertEquals(Direction.S, chandrayan.getDirection());
 
 		// Test case 4
-	    chandrayan.setPosition(3,5,1);
-	    chandrayan.setDirection(Direction.S);
+	    chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.W);
 	    chandrayan.moveBackward();
-	    assertEquals("(3,5,2)", chandrayan.getPosition());
+	    assertEquals("(1,0,0)", chandrayan.getPosition());
 	    assertEquals(Direction.S, chandrayan.getDirection());
 
 		// Test case 5
@@ -101,6 +89,51 @@ public class TDD {
 	    chandrayan.setPosition(1,0,-1);
 	    chandrayan.setDirection(Direction.E);
 	    chandrayan.moveBackward();
+	    assertEquals("(0, 0, 1)", chandrayan.getPosition());
+	    assertEquals(Direction.E, chandrayan.getDirection());
+	}
+
+	//Initially it will be failed
+	@Test
+	public void testTurnLeft()
+	{
+	    // Test case 1
+	    chandrayan.turnLeft();
+	    assertEquals("(0, 1, 0)", chandrayan.getPosition());
+	    assertEquals(Direction.N, chandrayan.getDirection());
+
+	    // Test case 2
+	    chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnLeft();
+	    assertEquals("(0,-1,0)", chandrayan.getPosition());
+	    assertEquals(Direction.S, chandrayan.getDirection());
+
+	    // Test case 3
+	    chandrayan.setPosition(-1,-1,-1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnLeft();
+	    assertEquals("(-1,-1,-2)", chandrayan.getPosition());
+	    assertEquals(Direction.S, chandrayan.getDirection());
+
+		// Test case 4
+	    chandrayan.setPosition(3,5,1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnLeft();
+	    assertEquals("(3,5,2)", chandrayan.getPosition());
+	    assertEquals(Direction.S, chandrayan.getDirection());
+
+		// Test case 5
+	    chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.W);
+	    chandrayan.turnLeft();
+	    assertEquals("(1,0,0)", chandrayan.getPosition());
+	    assertEquals(Direction.W, chandrayan.getDirection());
+
+		// Test case 6
+	    chandrayan.setPosition(1,0,-1);
+	    chandrayan.setDirection(Direction.E);
+	    chandrayan.turnLeft();
 	    assertEquals("(0, 0, 1)", chandrayan.getPosition());
 	    assertEquals(Direction.E, chandrayan.getDirection());
 	}

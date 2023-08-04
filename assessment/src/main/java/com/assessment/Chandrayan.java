@@ -38,11 +38,37 @@ public class Chandrayan {
 
 	    public void moveForward()
 	    {
+			if (direction == Direction.N)
+            	y++;
+        else if (direction == Direction.S)
+            	y--;
+        else if (direction == Direction.E)
+           	 x++;
+        else if (direction == Direction.W)
+            x--;
+        else if (direction == Direction.U)
+            z++;
+        else if (direction == Direction.D)
+            	z--;
+
 		   
 	    }
 	    
 	    public void moveBackward()
 	    {
+			if (direction == Direction.N)
+            y--;
+        else if (direction == Direction.S)
+            y++;
+        else if (direction== Direction.E)
+            x--;
+        else if (direction == Direction.W)
+            x++;
+        else if (direction == Direction.U)
+           z--;
+        else if (direction == Direction.D)
+            z++;
+
 	    	
 	    }
 	    
