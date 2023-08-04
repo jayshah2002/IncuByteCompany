@@ -74,6 +74,19 @@ public class Chandrayan {
 	    
 	    public void turnLeft()
 	    {
+			if (direction == Direction.N)
+            direction = Direction.W;
+        else if (direction == Direction.W)
+            direction = Direction.S;
+        else if (direction == Direction.S)
+            direction = Direction.E;
+        else if (direction == Direction.E)
+           direction = Direction.N;
+        else if (direction == Direction.U)
+            direction = Direction.W;
+        else if (direction == Direction.D)
+           direction = Direction.E;
+
 	    	
 	    }
 	    
