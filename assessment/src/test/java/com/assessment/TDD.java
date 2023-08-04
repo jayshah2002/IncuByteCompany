@@ -120,6 +120,40 @@ public class TDD {
 	
 	   
 	}
+	@Test
+	public void testTurnRight()
+	{
+	    // Test case 1
+		chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.N);
+	    chandrayan.turnRight();
+	    assertEquals("(0, 0, 0)", chandrayan.getPosition());
+	    assertEquals(Direction.E, chandrayan.getDirection());
+
+	    // Test case 2
+	    chandrayan.setPosition(1,0,1);
+	    chandrayan.setDirection(Direction.E);
+	    chandrayan.turnRight();
+	    assertEquals("(1,0,1)", chandrayan.getPosition());
+	    assertEquals(Direction.S, chandrayan.getDirection());
+
+	    // Test case 3
+	    chandrayan.setPosition(-1,-1,-1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnRight();
+	    assertEquals("(-1,-1,-1)", chandrayan.getPosition());
+	    assertEquals(Direction.W, chandrayan.getDirection());
+
+		// Test case 4
+	    chandrayan.setPosition(3,5,1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnRight();
+	    assertEquals("(3,5,1)", chandrayan.getPosition());
+	    assertEquals(Direction.E, chandrayan.getDirection());
+
+	
+	   
+	}
    
 }
 // {1, 0, 1, Direction.E, "b", "(0, 0, 1)", Direction.E},
