@@ -3,9 +3,9 @@ package com.assessment;
 public class Chandrayan {
 
 	 int x, y, z;
-	    char direction;
+	 Direction direction;
 
-	    public Chandrayan(int x, int y, int z, char direction) {
+	    public Chandrayan(int x, int y, int z, Direction direction) {
 	        this.x = x;
 	        this.y = y;
 	        this.z = z;
@@ -36,12 +36,53 @@ public class Chandrayan {
 			this.z = z;
 		}
 
-		public char getDirection() {
-			return direction;
-		}
-
-		public void setDirection(char direction) {
-			this.direction = direction;
-		}
+	    public void moveForward()
+	    {
+		   
+	    }
 	    
+	    public void moveBackward()
+	    {
+	    	
+	    }
+	    
+	    public void turnLeft()
+	    {
+	    	
+	    }
+	    
+	    public void turnRight()
+	    {
+	    	
+	    }
+	    
+	    public void turnUp()
+	    {
+	    	
+	    }
+	    
+	    public void turnDown()
+	    {
+	    	
+	    }
+	    
+	    public String getPosition()
+	    {
+	    	return "(" + x + ", " + y + ", " + z + ")";
+	    }
+	    
+	    public void setPosition(int x, int y,int z)
+	    {
+	    	this.x = x;
+	        this.y = y;
+	        this.z = z;
+	    }
+	    public void setDirection(Direction d)
+	    {
+	    	this.direction = d;
+	    }
+
+		public Direction getDirection() {
+			return this.direction;
+		}
 }
