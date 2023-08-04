@@ -120,6 +120,7 @@ public class TDD {
 	
 	   
 	}
+	
 	@Test
 	public void testTurnRight()
 	{
@@ -151,10 +152,44 @@ public class TDD {
 	    assertEquals("(3,5,1)", chandrayan.getPosition());
 	    assertEquals(Direction.E, chandrayan.getDirection());
 
-	
+	   
+	}
+	//Initially it will be failed
+	@Test
+	public void testTurnUp()
+	{
+	    // Test case 1
+		chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.N);
+	    chandrayan.turnUp();
+	    assertEquals("(0, 0, 0)", chandrayan.getPosition());
+	    assertEquals(Direction.U, chandrayan.getDirection());
+
+	    // Test case 2
+	    chandrayan.setPosition(1,0,1);
+	    chandrayan.setDirection(Direction.E);
+	    chandrayan.turnUp();
+	    assertEquals("(1,0,1)", chandrayan.getPosition());
+	    assertEquals(Direction.U, chandrayan.getDirection());
+
+	    // Test case 3
+	    chandrayan.setPosition(-1,-1,-1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnUp();
+	    assertEquals("(-1,-1,-1)", chandrayan.getPosition());
+	    assertEquals(Direction.U, chandrayan.getDirection());
+
+		// Test case 4
+	    chandrayan.setPosition(3,5,1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnUp();
+	    assertEquals("(3,5,1)", chandrayan.getPosition());
+	    assertEquals(Direction.U, chandrayan.getDirection());
+
 	   
 	}
    
+	
 }
 // {1, 0, 1, Direction.E, "b", "(0, 0, 1)", Direction.E},
 //                 {0, 0, 0, Direction.W, "b", "(1, 0, 0)", Direction.W},

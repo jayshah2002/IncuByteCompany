@@ -111,6 +111,10 @@ public class Chandrayan {
 	    
 	    public void turnUp()
 	    {
+			if (direction == Direction.N || direction == Direction.S ||
+            direction == Direction.E || direction == Direction.W)
+            direction = Direction.U;
+
 	    	
 	    }
 	    
