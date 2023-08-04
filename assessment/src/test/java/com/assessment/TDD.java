@@ -20,23 +20,23 @@ public class TDD {
 	public void testMoveForward()
 	{
 	    // Test case 1
-	    chandrayan.moveForward();
-	    assertEquals("(0, 1, 0)", chandrayan.getPosition());
-	    assertEquals(Direction.N, chandrayan.getDirection());
+	    spacecraft.moveForward();
+	    assertEquals("(0, 1, 0)", spacecraft.getPosition());
+	    assertEquals(Direction.N, spacecraft.getDirection());
 
 	    // Test case 2
-	    chandrayan.setPosition(1, 0, 1);
-	    chandrayan.setDirection(Direction.E);
-	    chandrayan.moveForward();
-	    assertEquals("(2, 0, 1)", chandrayan.getPosition());
-	    assertEquals(Direction.E, chandrayan.getDirection());
+	    spacecraft.setPosition(1, 0, 1);
+	    spacecraft.setDirection(Direction.E);
+	    spacecraft.moveForward();
+	    assertEquals("(2, 0, 1)", spacecraft.getPosition());
+	    assertEquals(Direction.E, spacecraft.getDirection());
 
 	    // Test case 3
-	    chandrayan.setPosition(0, 0, 0);
-	    chandrayan.setDirection(Direction.W);
-	    chandrayan.moveForward();
-	    assertEquals("(-1, 0, 0)", chandrayan.getPosition());
-	    assertEquals(Direction.W, chandrayan.getDirection());
+	    spacecraft.setPosition(0, 0, 0);
+	    spacecraft.setDirection(Direction.W);
+	    spacecraft.moveForward();
+	    assertEquals("(-1, 0, 0)", spacecraft.getPosition());
+	    assertEquals(Direction.W, spacecraft.getDirection());
 	}
    
 }
