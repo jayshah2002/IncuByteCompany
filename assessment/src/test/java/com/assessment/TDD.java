@@ -189,7 +189,41 @@ public class TDD {
 	   
 	}
    
-	
+	//Initially it will be failed
+	@Test
+	public void testTurnDown()
+	{
+	    // Test case 1
+		chandrayan.setPosition(0,0,0);
+	    chandrayan.setDirection(Direction.N);
+	    chandrayan.turnDown();
+	    assertEquals("(0, 0, 0)", chandrayan.getPosition());
+	    assertEquals(Direction.D, chandrayan.getDirection());
+
+	    // Test case 2
+	    chandrayan.setPosition(1,0,1);
+	    chandrayan.setDirection(Direction.E);
+	    chandrayan.turnDown();
+	    assertEquals("(1,0,1)", chandrayan.getPosition());
+	    assertEquals(Direction.D, chandrayan.getDirection());
+
+	    // Test case 3
+	    chandrayan.setPosition(-1,-1,-1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnDown();
+	    assertEquals("(-1,-1,-1)", chandrayan.getPosition());
+	    assertEquals(Direction.D, chandrayan.getDirection());
+
+		// Test case 4
+	    chandrayan.setPosition(3,5,1);
+	    chandrayan.setDirection(Direction.S);
+	    chandrayan.turnDown();
+	    assertEquals("(3,5,1)", chandrayan.getPosition());
+	    assertEquals(Direction.D, chandrayan.getDirection());
+
+	   
+	}
+   
 }
 // {1, 0, 1, Direction.E, "b", "(0, 0, 1)", Direction.E},
 //                 {0, 0, 0, Direction.W, "b", "(1, 0, 0)", Direction.W},

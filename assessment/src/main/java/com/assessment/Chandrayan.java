@@ -120,6 +120,9 @@ public class Chandrayan {
 	    
 	    public void turnDown()
 	    {
+			if (direction == Direction.N || direction == Direction.S ||
+            direction == Direction.E || direction == Direction.W)
+            direction = Direction.D;
 	    	
 	    }
 	    
