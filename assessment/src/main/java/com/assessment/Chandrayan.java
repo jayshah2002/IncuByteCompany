@@ -1,5 +1,7 @@
 package com.assessment;
 
+import java.util.List;
+
 public class Chandrayan {
 
 	 int x, y, z;
@@ -145,5 +147,33 @@ public class Chandrayan {
 		public Direction getDirection() {
 			return this.direction;
 		}
+
+		public static void processCommands(Spacecraft chandrayaan_3, List<Object> commands) {
+		// TODO Auto-generated method stub
+		for (Object command : commands) {
+	        if (command.equals('f'))
+	            chandrayaan_3.moveForward();
+	        else if (command.equals('b'))
+	            chandrayaan_3.moveBackward();
+	        else if (command.equals('l'))
+	            chandrayaan_3.turnLeft();
+	        else if (command.equals('r'))
+	            chandrayaan_3.turnRight();
+	        else if (command.equals('u'))
+	            chandrayaan_3.turnUp();
+	        else if (command.equals('d'))
+	            chandrayaan_3.turnDown();
+	    }
+
+		
+	}
+
+	public void show() {
+		// TODO Auto-generated method stub
+		System.out.println("Final Position: (" + this.x + ", "
+                + this.y + ", " + this.z + ")");
+        System.out.println("Final Direction: " + this.direction);
+		
+	}
 		
 }
