@@ -145,4 +145,5 @@ public class Chandrayan {
 		public Direction getDirection() {
 			return this.direction;
 		}
+		
 }
